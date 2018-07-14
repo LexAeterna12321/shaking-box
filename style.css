@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand+SC');
+body {
+    margin: 0;
+    padding: 0;
+    background: #333;
+    font-family: 'Patrick Hand SC', cursive;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 50vh;
+}
+
+.box {
+    position: absolute;
+    width: 30vw;
+    height: 30vh;
+    background: rgb(71, 21, 21);
+    text-align: center;
+    line-height: 30vh;
+    font-size: 4rem;
+    z-index: 10;
+    border-radius: 10px;
+    transition: all 3s ease-in-out;
+    transform-origin: bottom;
+    box-shadow: 0 .4rem 1rem .4rem rgba(0, 0, 0, .5);
+}
+
+.box:hover {
+    animation: anim 10s ease-in-out infinite alternate;
+}
+
+.letters {
+    position: absolute;
+    bottom: 30vh;
+    left: 15%;
+    width: 50vw;
+    height: auto;
+    z-index: -2;
+    transform-origin: bottom;
+    transition: all 1s;
+    transition-delay: 4s;
+    letter-spacing: 1.1rem;
+    opacity:0;
+}
+
+.letters span {
+    display: inline-block;
+    font-size: 3rem;
+}
+
+.box:hover~.letters {
+    transform: translate(60%, 50%);
+    opacity:1;
+}
+
+#w {
+    color: #f4f4f4;
+    transform: rotate(50deg);
+}
+
+#e {
+    color: #439130;
+    transform: rotate(5deg);
+}
+
+#n {
+    color: #21165e;
+    transform: rotate(-50deg);
+}
+
+#d {
+    color: #b92929;
+    transform: rotate(20deg);
+}
+
+#i {
+    color: #a11076;
+    transform: rotate(-3deg);
+}
+
+#g {
+    color: #eb6112;
+    transform: rotate(-70deg);
+}
+
+#o {
+    color: #0db4c0;
+    transform: rotate(34deg);
+}
+
+@keyframes anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    5% {
+        transform: rotate(10deg);
+    }
+    10% {
+        transform: rotate(-10deg);
+    }
+    15% {
+        transform: rotate(20deg);
+    }
+    20% {
+        transform: rotate(-20deg);
+    }
+    25% {
+        transform: rotate(40deg);
+    }
+    30% {
+        transform: rotate(-30deg);
+    }
+    35% {
+        transform: rotate(45deg);
+    }
+    40% {
+        transform: rotate(-40deg);
+    }
+    45% {
+        transform: rotate(80deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
